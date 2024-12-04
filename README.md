@@ -1,4 +1,4 @@
-# package-name
+# TypeScript Package Template
 
 The simplest typescript package template I can think of.
 
@@ -9,11 +9,23 @@ The simplest typescript package template I can think of.
 
 ## Setting up
 
+A simple script will set some values in package.json and rename files in src/ for your package name:
+
+```sh
+pnpm setup <your user name> <your package name>
+```
+
+Or you can just edit package.json manually before you publish to npm.
+
+## Development
+
+**VSCode Setup**
+
 1. Install [Node Test Runner Extension](https://marketplace.visualstudio.com/items?itemName=connor4312.nodejs-testing)
 2. Click the "Testing" tab in the VSCode Activity Bar
 3. Reload VSCode Window or restart vscode if you don't see any tests in the sidebar
 
-## Development
+**Workflow**
 
 1. Open a test file
 2. Click the testing buttons in the gutter to run a test
@@ -24,7 +36,7 @@ The simplest typescript package template I can think of.
 - Run all tests in the current **f**ile with `Command + ; + f`
 - Run **c**urrent test at the cursor with `Command + ; + c`
 
-## Playing around
+**Playing around**
 
 You can run any file in the debugger with F5. Or click the debug icon in the Activity Bar and click the play button up top.
 

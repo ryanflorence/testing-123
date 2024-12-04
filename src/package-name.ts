@@ -1,1 +1,1 @@
-export { fib } from "./lib/implementation.js";
+export { fib } from "./lib/fib.ts";

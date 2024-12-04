@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
 import * as assert from "node:assert";
-import { fib } from "./implementation.ts";
+import { fib } from "./fib.ts";
 
 describe("fib", () => {
   it("should return 0 for 0", () => {
