@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.lib.json --noEmit",
     "test": "node --experimental-strip-types --disable-warning=ExperimentalWarning --test './src/**/*.test.ts'"
   },
   "keywords": [],
