@@ -4,8 +4,6 @@ on:
   push:
     paths:
       - "src/**"
-      - "package.json"
-      - "tsconfig.json"
     branches:
       - "main"
     tags-ignore:
@@ -13,8 +11,6 @@ on:
   pull_request:
     paths:
       - "src/**"
-      - "package.json"
-      - "tsconfig.json"
 
 jobs:
   test:
