@@ -19,4 +19,9 @@ describe("fib", () => {
     let f = fib(10);
     assert.strictEqual(f, 55);
   });
+
+  it("should return 6765 for 20", () => {
+    let f = fib(20);
+    assert.strictEqual(f, 6765);
+  });
 });
