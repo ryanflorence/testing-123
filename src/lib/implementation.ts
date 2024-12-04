@@ -4,3 +4,5 @@ export function fib(n: number): number {
   }
   return fib(n - 1) + fib(n - 2);
 }
+
+undefined();

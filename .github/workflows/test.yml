@@ -17,17 +17,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-      - uses: pnpm/action-setup@v4
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: "22.x"
           registry-url: "https://registry.npmjs.org"
           cache: "pnpm"
 
-      - run: pnpm install
+      - name: Install dependencies
+        run: pnpm install
 
-      - name: Test
-        run: pnpm test
+      - name: Build
+        run: pnpm build
+
+  typecheck:
+    needs: [build]
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: tsc --noEmit -p tsconfig.lib.json
+
+  test:
+    needs: [typecheck]
+    runs-on: ubuntu-latest
+
+    steps:
+      - run: pnpm test
