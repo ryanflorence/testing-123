@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanflorence/testing-123.git"
+  },
   "exports": {
     ".": "./dist/package-name.js"
   },
